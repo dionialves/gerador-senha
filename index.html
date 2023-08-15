@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/copy.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de Senha</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Gerador de Senha</h1>
+        <div class="form-gerenated-password">
+            <input class="gerenated-password-input" type="text"> 
+            <div class="gerenated-password-wrapper">
+                <img class="gerenated-password-icon-copy" src="./assets/copy-svgrepo-com.png" alt="">
+                <img class="gerenated-password-icon-gerenate" src="./assets/reload-svgrepo-com.png" alt="">
+            </div>
+            <div class="generated-password-wrapper">
+                <div class="generated-password-strength" style="width: 105%; background-color: rgb(0, 107, 77);"></div>
+            </div>
+        </div>
+        
+        <form class="settings">
+            <h3>Personalize sua senha</h3>
+            <div class="custom-ranger"></div>
+            <div class="settings-options">
+                <div class="settings-radio">
+                    <div>
+                        <input name="encryption-style" type="radio">
+                        <label>Fácil de pronunciar</label>
+                    </div>
+                    <div>
+                        <input name="encryption-style" type="radio">
+                        <label>Fácil de ler</label>
+                    </div>
+                    <div>
+                        <input name="encryption-style" type="radio" checked>
+                        <label>Todos os caracteres</label>
+                    </div>
+
+                </div>
+                <div class="settings-checkbox">
+                    <div>
+                        <input name="uppercase" type="checkbox" checked required>
+                        <label>Letra Maiúscula</label>
+                    </div>
+                    <div>
+                        <input name="lowercase" type="checkbox" checked>
+                        <label>Letra minúscula</label>
+                    </div>
+                    <div>
+                        <input name="numbers" type="checkbox" checked>
+                        <label>Numeros</label>
+                    </div>
+                    <div>
+                        <input name="symbols" type="checkbox" checked>
+                        <label>Simbolos</label>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+
+        <div>
+            <button>Copiar Senha</button>
+        </div>
+
+    </div>
+</body>
+</html>
