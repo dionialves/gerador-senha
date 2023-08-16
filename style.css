@@ -1,5 +1,5 @@
 * {
-    
+    font-family: 'Noto Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,7 +18,9 @@ h1 {
     font-family: 'Khand', sans-serif;
     text-align: center;
     font-size: 3rem;
-
+    line-height: 56px;
+    margin-top: 30px;
+    margin-bottom: 56px;
 }
 
 .form-gerenated-password {
@@ -51,6 +53,7 @@ h1 {
 .gerenated-password-icon-copy {
     width: 35px;
     height: 35px;
+    cursor: pointer;
 }
 
 .generated-password-wrapper {
@@ -76,4 +79,136 @@ h1 {
     position: absolute;
     transition: width .63s,background-color .2s;
     width: 0;
+}
+
+.settings {
+    border-radius: 16px;
+    background-color: #FFF;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h3 {
+    font-family: 'Khand', sans-serif;
+    border-bottom: 2px solid #f0f2f5;
+    line-height: 2.7rem;
+    margin-bottom: 26px;
+    font-size: 1.75rem;
+    width: 100%;
+}
+
+.custom-ranger-wrapper {
+    width: 50%;
+    padding-right: 40px;
+    font-size: 18px;
+}
+
+.custom-ranger-inner {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+}
+
+.custom-ranger-label {
+    font-weight: 400;
+    
+}
+
+.custom-ranger-number {
+    height: 50px;
+    width: 75px;
+    text-align: center;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 16px;
+    box-shadow: inset 0 1px 2px 0 rgba(0,0,0,.25);
+    margin-right: 10px;
+}
+
+.custom-ranger {
+    width: 100%;
+}
+
+.row {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    line-height: 27px;
+}
+.settings-radio {
+    width: 50%;
+
+}
+
+.settings-checkbox {
+    width: 50%;
+}
+
+.settings-radio {
+
+}
+
+.settings-checkbox {
+    padding-left: 20px;
+}
+
+.radio {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.radio-input {
+    height: 24px;
+    width: 24px
+}
+
+.radio-label {
+    margin-left: 5px;
+}
+
+.checkbox {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.checkbox-input {
+    height: 24px;
+    width: 24px
+}
+
+.checkbox-label {
+    margin-left: 5px;
+}
+
+.copy-password {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.copy-password-bnt {
+    font-family: 'Khand', sans-serif;
+    font-weight: 700;
+    background-color: #d22;
+    color: #fff;
+    margin: 16px;
+    font-size: 20px;
+    padding: 11px 40px 13px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.copy-password-bnt:hover {
+    background-color: #c21e1e;
+}
+
+.copy-password-bnt:active {
+    background-color: #9f1919;
 }
