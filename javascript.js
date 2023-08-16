@@ -14,6 +14,20 @@ const gerenate = document.getElementById('gerenated-password-icon-gerenate');
 const copy = document.getElementById('gerenated-password-icon-copy');
 const copyPasswordBnt = document.getElementById('copy-password-bnt');
 
+const copyToClipboard = () => {
+    navigator.clipboard.writeText(gerenatedPasswordInput.value);
+}
+
+const deleteCharacters = (characters, password) => {
+
+    let newPassword = "";
+    for (const char of password){
+        if (!characters.includes(char)) newPassword += char;
+    }
+
+    return newPassword
+}
+
 const changeInputRanger = () => {
     customRangerNumber.value = customRanger.value;
     generateNewPasswordAndShowOnScreen(customRanger.value);
@@ -29,10 +43,6 @@ const generateNewPasswordAndShowOnScreen = (length) => {
     gerenatedPasswordInput.value = newPassword;
 }
 
-const copyToClipboard = () => {
-    navigator.clipboard.writeText(gerenatedPasswordInput.value);
-}
-
 const validateInputCheckbox = (checkbox) => {
     if (!uppercase.checked && !lowercase.checked && !numbers.checked && !simbols.checked) checkbox.checked = true;
 
@@ -41,6 +51,9 @@ const validateInputCheckbox = (checkbox) => {
 
 const removingNumbersAndSymbols = () => {
 
+    uppercase.checked = true
+    lowercase.checked = true
+    
     numbers.checked = false;
     numbers.disabled = true;
 
@@ -84,27 +97,27 @@ const useAllCharacters = () => {
 
 const generateRandomPassword = (length) => {
 
-    const charsetUpercase = "ABCDEFGHIKLMNPQRSTUVWXYZ";
-    const charsetLowercase = "abcdefghikmnpqrstuvwxyz";
-    const charsetNumber = "23456789";
-    const charserSimbols = "@#$%&";
-    const charserHard = "oO0l1jJ(){}[]!^*";
+    const charsetUpercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const charsetLowercase = "abcdefghijklmnopqrstuvwxyz";
+    const charsetNumber = "0123456789";
+    const charsetSimbols = "!@#$%&^*(){}[]";
+    const charsetHard = "oO0l1jJ(){}[]!^*";
 
     let charset = ""
-    let password = "";
+    let password = ""
 
     if (uppercase.checked) charset += charsetUpercase;
     if (lowercase.checked) charset += charsetLowercase;
     if (numbers.checked) charset += charsetNumber;
-    if (simbols.checked) charset += charserSimbols;
-    if (!easyToLe.checked) charset += charserHard;
-
+    if (simbols.checked) charset += charsetSimbols;
+    if (easyToLe.checked) charset = deleteCharacters(charsetHard, charset);
+    
     for (let i = 0; i < length; i++) {
         const randomIndex = Math.floor(Math.random() * charset.length);
         password += charset[randomIndex];
     }
-    return password;
 
+    return password;
 }
 
 generateNewPasswordAndShowOnScreen(12);
