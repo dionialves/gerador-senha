@@ -33,6 +33,12 @@ const copyToClipboard = () => {
     navigator.clipboard.writeText(gerenatedPasswordInput.value);
 }
 
+const validateInputCheckbox = (checkbox) => {
+    if (!uppercase.checked && !lowercase.checked && !numbers.checked && !simbols.checked) checkbox.checked = true;
+
+    generateNewPasswordAndShowOnScreen(customRangerNumber.value);
+}
+
 const removingNumbersAndSymbols = () => {
 
     numbers.checked = false;
@@ -105,10 +111,10 @@ generateNewPasswordAndShowOnScreen(12);
 
 customRangerNumber.addEventListener("input", changeInputNumber);
 customRanger.addEventListener("input", changeInputRanger);
-uppercase.addEventListener("change", changeInputRanger);
-lowercase.addEventListener("change", changeInputRanger);
-numbers.addEventListener("change", changeInputRanger);
-simbols.addEventListener("change", changeInputRanger);
+uppercase.addEventListener("change", () => validateInputCheckbox(uppercase));
+lowercase.addEventListener("change", () => validateInputCheckbox(lowercase));
+numbers.addEventListener("change", () => validateInputCheckbox(numbers));
+simbols.addEventListener("change", () => validateInputCheckbox(simbols));
 easyToSay.addEventListener("change", removingNumbersAndSymbols);
 easyToLe.addEventListener("change", simpleToRead);
 allCharacters.addEventListener("change", useAllCharacters);
