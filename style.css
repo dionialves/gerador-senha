@@ -139,6 +139,7 @@ h3 {
     font-size: 16px;
     line-height: 27px;
 }
+
 .settings-radio {
     width: 50%;
 
@@ -211,4 +212,41 @@ h3 {
 
 .copy-password-bnt:active {
     background-color: #9f1919;
+}
+
+@media screen and (max-width: 991px) {
+    .custom-ranger-wrapper {
+        width: 100%;
+    }
+
+    .row {
+        width: 100%;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .custom-ranger-wrapper {
+        width: 100%;
+    }
+
+    .row {
+        width: 100%;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .settings-radio {
+        width: 100%;
+        padding: 20px 0 0 20px;
+    }
+
+    .settings-checkbox {
+        width: 100%;
+        padding: 20px 0 0 20px;
+    }
 }
