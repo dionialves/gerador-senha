@@ -1,4 +1,4 @@
-## Jokenpô
+## Gerador de senhas aleatórias
 
 <p>
   Desenvolvi esse pequeno projeto para treinar e melhorar os conhecimento adquiridos até o momento. Pensei em uma aplicativo que uso com frequencia, no caso um gerador de senhas aleatórias.
